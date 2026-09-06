@@ -1,4 +1,3 @@
-(() => {
 "use strict";
 // @ts-nocheck
 // Rajesh Sanangula Portfolio — immersive spatial layer v4 production spatial edition.
@@ -16,7 +15,7 @@ const certImages = ['cert-1.jpg', 'cert-2.jpg', 'cert-3.jpg', 'cert-4.jpg', 'cer
 const certNames = ['Professional Integration Developer', 'Associate EDI for X12', 'Associate Administrator', 'Associate Integration Architect', 'Professional Linux Operational Administrator', 'Professional API Design', 'Professional API Management', 'Associate Integration Developer'];
 const css = document.createElement('style');
 css.textContent = `
-
+.immersive-device-launch{position:fixed;right:18px;bottom:18px;z-index:10000;display:none;align-items:center;gap:8px;padding:12px 15px;border:1px solid rgba(111,226,255,.55);background:rgba(4,9,22,.82);color:#effbff;font:600 9px/1 inherit;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(18px);box-shadow:0 10px 36px rgba(0,0,0,.28);cursor:pointer}.immersive-device-launch.visible{display:flex}.immersive-device-launch:focus-visible{outline:2px solid rgba(111,226,255,.9);outline-offset:3px}
 .immersive-launch{position:relative;overflow:hidden;border:1px solid rgba(102,224,255,.42)!important;background:linear-gradient(135deg,rgba(27,221,255,.12),rgba(120,85,255,.12))!important;box-shadow:0 0 28px rgba(0,217,255,.10),inset 0 0 22px rgba(130,100,255,.06)}
 .immersive-launch:after{content:'VR / MR';position:absolute;right:10px;top:6px;font-size:8px;letter-spacing:.16em;opacity:.65}
 .spatial-shell{position:fixed;inset:0;z-index:9999;background:#02040b;display:none;overflow:hidden;color:#eef7ff;font-family:inherit}.spatial-shell.open{display:block}.spatial-shell.xr-ar{background:transparent}.spatial-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}.spatial-ui{position:absolute;inset:0;pointer-events:none;padding:28px;display:flex;flex-direction:column;justify-content:space-between}.spatial-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.spatial-brand{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#a9eaff}.spatial-title{margin-top:7px;font-size:clamp(25px,3.2vw,52px);font-weight:600;letter-spacing:-.04em;line-height:.95}.spatial-title em{font-style:normal;color:#a989ff}.spatial-status{padding:10px 13px;border:1px solid rgba(150,220,255,.25);background:rgba(5,10,24,.45);backdrop-filter:blur(18px);font-size:9px;letter-spacing:.16em;text-transform:uppercase}.spatial-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:18px}.spatial-hint{max-width:650px;font-size:11px;line-height:1.65;letter-spacing:.04em;color:rgba(229,242,255,.68)}.spatial-hint strong{color:#fff}.spatial-actions{pointer-events:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.spatial-actions button{font:inherit;color:#edf8ff;background:rgba(8,14,31,.72);border:1px solid rgba(141,219,255,.28);padding:11px 14px;letter-spacing:.13em;font-size:9px;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(18px)}.spatial-actions button:hover{border-color:rgba(100,230,255,.75);box-shadow:0 0 22px rgba(0,217,255,.13)}.spatial-actions button:disabled{opacity:.35;cursor:not-allowed}.spatial-nodebar{position:absolute;left:50%;bottom:86px;transform:translateX(-50%);display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:min(760px,90vw);pointer-events:auto;z-index:2}.spatial-nodebar button{font:inherit;color:rgba(235,248,255,.82);background:rgba(5,10,24,.56);border:1px solid rgba(141,219,255,.2);padding:7px 9px;font-size:8px;letter-spacing:.11em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(14px)}.spatial-nodebar button:hover,.spatial-nodebar button:focus-visible{border-color:rgba(100,230,255,.72);outline:none}.spatial-nodebar button[aria-current="true"]{border-color:rgba(100,230,255,.62);box-shadow:0 0 18px rgba(0,217,255,.1)}.spatial-inspector{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(390px,76vw);padding:18px 20px;border:1px solid rgba(142,218,255,.28);background:rgba(5,10,24,.62);backdrop-filter:blur(24px);box-shadow:0 18px 70px rgba(0,0,0,.38);opacity:0;pointer-events:none;transition:.22s ease}.spatial-inspector.show{opacity:1}.spatial-inspector span{font-size:8px;letter-spacing:.18em;color:#8feaff}.spatial-inspector strong{display:block;margin:6px 0 7px;font-size:23px}.spatial-inspector p{margin:0;color:rgba(232,243,255,.72);font-size:11px;line-height:1.6}.spatial-close{pointer-events:auto;position:absolute;right:28px;top:88px;width:42px;height:42px;border:1px solid rgba(145,216,255,.3);background:rgba(5,10,24,.58);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(18px);z-index:2}.spatial-onboarding{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(2,4,11,.72);backdrop-filter:blur(10px);z-index:3;opacity:1;transition:opacity .35s ease}.spatial-onboarding.hide{opacity:0;pointer-events:none}.spatial-card{width:min(620px,92vw);padding:30px;border:1px solid rgba(141,219,255,.3);background:linear-gradient(145deg,rgba(7,14,32,.9),rgba(11,8,28,.84));box-shadow:0 30px 100px rgba(0,0,0,.45),inset 0 0 50px rgba(75,112,255,.05)}.spatial-card-kicker{font-size:9px;letter-spacing:.22em;color:#8feaff}.spatial-card h2{margin:10px 0 12px;font-size:clamp(28px,5vw,54px);line-height:.92;letter-spacing:-.045em}.spatial-card h2 em{font-style:normal;color:#a989ff}.spatial-card p{margin:0 0 20px;color:rgba(232,243,255,.72);font-size:12px;line-height:1.7}.spatial-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 20px}.spatial-check{padding:12px;border:1px solid rgba(141,219,255,.16);background:rgba(255,255,255,.025);font-size:8px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:rgba(235,247,255,.72)}.spatial-check b{display:block;color:#fff;margin-bottom:4px}.spatial-ready{pointer-events:auto}.spatial-ready button{font:inherit;color:#eefaff;background:linear-gradient(135deg,rgba(33,210,255,.18),rgba(126,91,255,.2));border:1px solid rgba(111,226,255,.48);padding:13px 18px;letter-spacing:.15em;font-size:9px;text-transform:uppercase;cursor:pointer}.spatial-ready button:hover{box-shadow:0 0 30px rgba(0,217,255,.14)}@media(max-width:760px){.spatial-ui{padding:18px}.spatial-status{display:none}.spatial-bottom{align-items:stretch;flex-direction:column}.spatial-actions{justify-content:flex-start}.spatial-close{right:18px;top:76px}.spatial-nodebar{bottom:118px;max-width:92vw}.spatial-card{padding:22px}.spatial-checks{grid-template-columns:1fr}.spatial-onboarding{align-items:flex-end;padding:14px}}.spatial-nodebar button:focus-visible,.spatial-actions button:focus-visible,.spatial-close:focus-visible,.spatial-ready button:focus-visible{outline:2px solid rgba(111,226,255,.85);outline-offset:3px}@media (prefers-reduced-motion:reduce){.spatial-shell *{animation:none!important;transition:none!important}.spatial-onboarding{backdrop-filter:none}.spatial-nodebar button:hover,.spatial-actions button:hover{box-shadow:none}}
@@ -280,19 +279,17 @@ async function startXR(kind) { if (!ready) {
 } try {
     const type = kind === 'vr' ? 'immersive-vr' : 'immersive-ar';
     if (!(await xr.isSessionSupported(type))) {
-        mode = 'space'; ready = false; shell.classList.remove('xr-ar'); onboarding.classList.remove('hide');
-        statusEl.textContent = `${kind === 'vr' ? 'VR' : 'MR'} NOT AVAILABLE · 3D SPACE ACTIVE`;
-        resize(); if (!raf) frame();
+        statusEl.textContent = `${kind === 'vr' ? 'VR' : 'MR'} NOT AVAILABLE ON THIS BROWSER`;
         return;
     }
     if (xrSession)
         await xrSession.end();
     await gl.makeXRCompatible();
     const optional = ['local-floor', 'bounded-floor', 'hand-tracking'];
-    const init = { requiredFeatures: ['local-floor'], optionalFeatures: kind === 'ar' ? [...optional, 'dom-overlay'] : optional };
+    const init = { optionalFeatures: kind === 'ar' ? [...optional, 'dom-overlay'] : optional };
     if (kind === 'ar')
         init.domOverlay = { root: shell };
-    try { xrSession = await xr.requestSession(type, init); } catch (firstError) { delete init.requiredFeatures; xrSession = await xr.requestSession(type, init); }
+    xrSession = await xr.requestSession(type, init);
     xrLayer = new XRWebGLLayer(xrSession, gl, { alpha: kind === 'ar', antialias: true });
     xrSession.updateRenderState({ baseLayer: xrLayer });
     try {
@@ -316,9 +313,7 @@ async function startXR(kind) { if (!ready) {
 }
 catch (e) {
     console.error(e);
-    mode = 'space'; ready = false; shell.classList.remove('xr-ar'); onboarding.classList.remove('hide');
     statusEl.textContent = 'IMMERSIVE SESSION FAILED · 3D SPACE ACTIVE';
-    resize(); if (!raf) frame();
 } }
 function xrFrame(t, frameObj) { if (!xrSession || !xrLayer || !xrRef)
     return; const pose = frameObj.getViewerPose(xrRef); if (pose) {
@@ -328,9 +323,6 @@ function xrFrame(t, frameObj) { if (!xrSession || !xrLayer || !xrRef)
         gl.viewport(vp.x, vp.y, vp.width, vp.height);
         renderWorld(view.transform.inverse.matrix, view.projectionMatrix, t);
     }
-    // Keep the XR render loop alive. Without scheduling the next frame, the
-    // immersive session can appear as a blank/black view after entering VR/MR.
-    if (xrSession) xrSession.requestAnimationFrame(xrFrame);
 } xrSession.requestAnimationFrame(xrFrame); }
 canvas.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; lastY = e.clientY; });
 window.addEventListener('pointerup', () => dragging = false);
@@ -373,5 +365,3 @@ catch { } });
 initGL();
 if (gl)
     loadTextures();
-
-})();
